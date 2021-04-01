@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <title>Expense Tracker</title>
+</head>
+<body>
+    <div class="section">
+        <div class="container">
+            <h1 class="center">Expense Tracker</h1>
+            <p style="text-align:justify"><b>Hi there, welcome to Expense Tracker. A tool to keep track of all your expenses.</b></p>
+            <p style="text-align:justify">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance.</p>
+        </div>
+    </div>
+    <div class="section">
+        <div class="container">
+            <a href="{% url 'signin' %}"><button class="btn waves-effect">Sign In</button></a>
+            <a href="{% url  'signup' %}"><button class="btn waves-effect">Sign Up</button></a>
+            <a href="{% url  'expenseInfo' %}"><button class="btn waves-effect">Add Expenses</button></a>
+            <br>New here? Sign up now..
+        </div>
+    </div>
+
+</body>
+</html>
