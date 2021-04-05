@@ -1,1 +1,1 @@
-# ExpenseTracker is a Web Application where anyone can track their regular expenses with useful visualization of data. Stay connected for more update.
+# ExpenseTracker is a Web Application where you can track your regular expenses with useful visualization of data. You can see a month-end analysis of your total budget.
