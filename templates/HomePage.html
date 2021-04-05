@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title_block %} Expense Tracker {% endblock %}
+
+{% block body_block %}
+
+<div class="container my-auto ">
+    <img class="img-fluid" src="../media/bg.png" alt="" style="width:100%; height: 100%;">
+</div>
+<br>
+<div class="container">
+    <p style="text-align:justify"><b>Welcome to Expense Tracker. A tool to keep track of all your
+            expenses.</b></p>
+    <p style="text-align:justify">Are you getting out of MONEY? Maintain your monthly budget by keeping track of your
+        daily expenses just in minutes with our App.</p>
+</div>
+
+<!-- <div class="section">
+    <div class="container">
+        <a href="{% url 'AccountsApp:login_view' %}"><button class="btn btn-primary">Sign In</button></a>
+        <a href="{% url 'AccountsApp:registration_view' %}"><button class="btn btn-success">Sign Up</button></a>
+    </div>
+</div> -->
+
+<footer>
+    <p>Author: Hege Refsnes</p>
+    <p><a href="mailto:hege@example.com">hege@example.com</a></p>
+</footer>
+
+{% endblock %}

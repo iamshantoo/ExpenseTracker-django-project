@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block title_block %} Change Pass {% endblock %}
+{% block body_block %}
+{% if changed %}
+<div class="alert alert-success">
+    Password Change Successfully!
+</div>
+{% endif %}
+<form method="POST">
+    {{ form|crispy }}
+    {% csrf_token %}
+    <button type="submit" class="btn btn-secondary btn-sm">Change</button>
+    <a href="{% url 'AccountsApp:user_change' %}"><button type="button"
+            class="btn btn-warning btn-sm">Cancel</button></a>
+</form>
+{% endblock %}

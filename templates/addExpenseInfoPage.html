@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block title_block %} ExpenseInfo {% endblock %}
+
+{% block body_block %}
+<h2>Add your expense info</h2>
+
+<form method="POST">
+    {{form|crispy}}
+    {% csrf_token %}
+    <button type="submit" class="btn btn-primary btn-sm">Submit</button>
+    <a href="{% url 'AccountsApp:profile_view' %}"><button type="button"
+            class="btn btn-warning btn-sm">Cancel</button></a>
+
+</form>
+<br>
+{% endblock %}

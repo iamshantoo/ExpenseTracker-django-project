@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% block title_block %} User Expense Info {% endblock %}
+{% block body_block %}
+<div class="container">
+    <h2>User Expenses</h2>
+</div>
+<div class="container">
+    <br>
+    <p>Name: {{user.first_name }} {{ user.last_name }}</p>
+    <p>Date Joined: {{ user.date_joined }}</p>
+    <p>Expenses: {{ user.username }}</p>
+
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 5px;
+            text-align: center;
+        }
+
+        th {
+            text-align: center;
+        }
+
+        #t01 {
+            width: 100%;
+            background-color: #f1f1c1;
+        }
+    </style>
+
+    <!-- Create Table -->
+    <table style="width:100%" id="t01">
+        <tr>
+            <th>Expense Name</th>
+            <th>Cost (BDT)</th>
+            <th>Date</th>
+        </tr>
+        <!-- {% for data in datas %} -->
+        <!-- <tr>
+            <td>{{data.expense_name}}</td>
+            <td>{{data.cost}}</td>
+            <td>{{data.date}}</td>
+        </tr> -->
+        <!-- {% endfor %} -->
+
+        <tr>
+            <td>Mobile</td>
+            <td>24000</td>
+            <td>2021-04-03</td>
+        </tr>
+        <tr>
+            <td>RAM</td>
+            <td>3100</td>
+            <td>2021-04-06</td>
+        </tr>
+
+        <tr>
+            <td>SSD</td>
+            <td>3500</td>
+            <td>2021-04-05</td>
+        </tr>
+
+        <tr>
+            <td>Monitor</td>
+            <td>10500</td>
+            <td>2021-03-26</td>
+        </tr>
+
+        <tr>
+            <td>Bike</td>
+            <td>205000</td>
+            <td>2021-03-26</td>
+        </tr>
+
+    </table>
+    <br>
+    <a href="{% url 'AccountsApp:profile_view' %}"><button class="btn btn-dark btn-sm">Back to Profile</button></a>
+</div>
+<br>
+{% endblock %}
