@@ -2,13 +2,15 @@
 {% block title_block %} User Expense Info {% endblock %}
 {% block body_block %}
 <div class="container">
-    <h2>User Expenses</h2>
+    <h2>User Expenses Info</h2>
 </div>
 <div class="container">
     <br>
-    <p>Name: {{user.first_name }} {{ user.last_name }}</p>
+    <p>User ID: {{ user.id }}</p>
+    <p>Username: {{ user.username }}</p>
+    <p>Name: {{ user.get_full_name }}</p>
     <p>Date Joined: {{ user.date_joined }}</p>
-    <p>Expenses: {{ user.username }}</p>
+    <p><b>Expenses: </p>
 
     <style>
         table,
@@ -41,42 +43,13 @@
             <th>Cost (BDT)</th>
             <th>Date</th>
         </tr>
-        <!-- {% for data in datas %} -->
-        <!-- <tr>
-            <td>{{data.expense_name}}</td>
-            <td>{{data.cost}}</td>
-            <td>{{data.date}}</td>
-        </tr> -->
-        <!-- {% endfor %} -->
-
+        {% for datas in data %}
         <tr>
-            <td>Mobile</td>
-            <td>24000</td>
-            <td>2021-04-03</td>
+            <td>{{datas.expense_name}}</td>
+            <td>{{datas.cost}}</td>
+            <td>{{datas.date_added}}</td>
         </tr>
-        <tr>
-            <td>RAM</td>
-            <td>3100</td>
-            <td>2021-04-06</td>
-        </tr>
-
-        <tr>
-            <td>SSD</td>
-            <td>3500</td>
-            <td>2021-04-05</td>
-        </tr>
-
-        <tr>
-            <td>Monitor</td>
-            <td>10500</td>
-            <td>2021-03-26</td>
-        </tr>
-
-        <tr>
-            <td>Bike</td>
-            <td>205000</td>
-            <td>2021-03-26</td>
-        </tr>
+        {% endfor %}
 
     </table>
     <br>
