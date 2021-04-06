@@ -29,11 +29,7 @@ def addExpenseInfoPage(request):
     return render(request, "addExpenseInfoPage.html", context=dict)
 
 
-# @login_required
-# def showExpenseInfoPage(request, id):
-#     data = ExpenseInfo.objects.get(id=id)
-#     return render(request, 'showExpenseInfoPage.html', context={'data': data})
-
 @login_required
 def showExpenseInfoPage(request):
-    return render(request, 'showExpenseInfoPage.html', context={})
+    data = ExpenseInfo.objects.filter(user=request.user)
+    return render(request, 'showExpenseInfoPage.html', context={'data': data})
