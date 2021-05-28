@@ -7,3 +7,9 @@ class expenseInfo(forms.ModelForm):
     class Meta:
         model = ExpenseInfo
         fields = ('expense_name', 'cost', 'date_added')
+
+
+class editExpenseInfo(forms.ModelForm):
+    class Meta:
+        model = ExpenseInfo
+        fields = ('expense_name', 'cost')
